@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel do Usuário</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container dashboard-container">
+    <header class="dashboard-header">
+      <h1>Painel do Usuário</h1>
+      <button id="logout-btn" class="logout-button btn-logout">Sair</button>
+    </header>
+
+    <main class="user-dashboard">
+      <section class="user-info">
+        <p>Bem-vindo, <span id="dashboard-username"></span>!</p>
+        <p>Seu e-mail: <span id="dashboard-email"></span></p>
+      </section>
+
+      <!-- Seção de Notificações -->
+      <section class="notifications">
+        <h2>Notificações</h2>
+        <ul id="notifications-list">
+          <li>Você tem 3 mensagens novas</li>
+          <li>Atualização disponível</li>
+          <li>Sua conta foi verificada</li>
+        </ul>
+      </section>
+
+      <!-- Botões de Ação Rápida -->
+      <section class="quick-actions">
+        <button class="btn-action" onclick="editProfile()">✏️ Editar perfil</button>
+        <button class="btn-action" onclick="changePassword()">🔒 Alterar senha</button>
+        <button class="btn-action" onclick="openPreferences()">⚙️ Preferências</button>
+      </section>
+
+      <nav class="dashboard-options">
+        <h2>Opções</h2>
+        <ul>
+          <li>
+            <img src="icons/pinterest.png" alt="Pinterest" class="icon" />
+            <a href="https://pin.it/6KctCadLH">Perfil do Pinterest</a>
+          </li>
+          <li>
+            <img src="icons/github.jpg" alt="GitHub" class="icon" />
+            <a href="https://github.com/AnaBianki">GitHub</a>
+          </li>
+          <li>
+            <img src="icons/s1.png" alt="Sanrio" class="icon" />
+            <a href="https://www.sanrio.com.br/">Sanrio</a>
+          </li>
+          <li>
+            <img src="icons/drive.jpg" alt="Drive" class="icon" />
+            <a href="https://drive.google.com/drive/folders/15Ie7Va8ZDhI3SiBBRhrfk9BmH64rdJiF?usp=drive_link">Drive</a>
+          </li>
+        </ul>
+      </nav>
+    </main>
+  </div>
+
+  <script src="Principal.js"></script>
+  <script>
+    // Funções JS para botões de ação rápida
+    function editProfile() {
+      alert('Abrir edição de perfil');
+    }
+    function changePassword() {
+      alert('Abrir alteração de senha');
+    }
+    function openPreferences() {
+      alert('Abrir preferências');
+    }
+
+    // Logout - exemplo simples
+    document.getElementById('logout-btn').addEventListener('click', function () {
+      alert('Fazendo logout...');
+      // redirecionar ou limpar sessão aqui
+    });
+  </script>
+</body>
+</html>
